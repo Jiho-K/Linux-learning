@@ -1,0 +1,74 @@
+Linux Notes
+
+pwd - Print working directory
+ls - list
+	ls -al
+	this has 2 statements. a is "show all files (including hidden)" and l stands for display more detailed directory list
+cd - change directory
+	by typing just "cd" this will move you back to the home directory (equivalent to "cd~")
+	to navigate to root directory use "cd/"
+	cd . means current working directory
+	cd .. means go up a directory (~/desktop would become ~)
+
+find - finds a file on the system
+	"find" finds all files within the current directory and not WITHIN it
+	this finds all files within the working directory
+	if it is a file, it will print the name of the file
+	if it is a folder, it will print everything inside that folder with the folder file path
+	to search everything within the directory use . (find . -name *.cpp)
+		this will find everything within the working directory with all extension that has .cpp
+		note: * means there can be ANYTHING there (*t.txt) will find ht.txt and asdft.txt both and print working directory of both
+			especially useful when trying to find something with an extension!
+		-name means you are looking for a file with the name. This is required when the file is in a different directory then the one you are currently working on
+		-type f means search only for files (no folders and such)
+	Similarly: / finds everything on the ENTIRE computer (since / means root)
+	
+
+man - displays manual
+	man *command* will display the full manual for the command.
+		When finding something from the manual and testing it out MAKE SURE YOU KNOW WHAT IT DOES
+		ESPECIALLY for delete commands Linux does NOT delete to a "trashcan" when using the terminal. To recover files it is a very long and tedious process and if the command is even slightly off, your entire drive may be wiped out!!!
+		Remember to backup files regularly
+
+clear - clears screen
+
+sudo / su - executes command as super user
+	to change ANYTHING in the root file you need sudo
+		you must type password (only once once you open terminal) whenever accessing files as sudo
+	Think of this as "admin" privilege. It may be required to access or download certain files.
+	
+rm - remove file
+	rm -r deletes the ENTIRE file/folder without asking BE CAREFUL!!!
+		VERY DIFFICULT TO GET BACK IF WRONG FILE IS DELETED!!
+
+rmdir - remove empty directory
+
+mkdir - make a new directory
+
+ps - prints a list of running processes (process status)
+	-a for all processes not associated with the terminal
+	-T for all processes associated with the terminal
+	ps aux for all processes in BSD format
+	-u *user name* for all process associated with user
+	-u root for processes run by root user
+
+
+mv - move a file & rename files
+	to rename a file, format is mv ( original file name ) ( file name you want )
+	you may also do
+		mv "asdf" "hi"
+		assuming asdf is the original file name and hi is the file name you want. the "" is optional here.
+			May also use '' instead
+
+	to move a file, assuming the name is a
+	mv a ~/Desktop will move the file a to the desktop
+
+grep – The global regular expression print program lets you search through a file or output of another program.
+
+
+
+
+Shortcut keys
+ctrl - super - d	-> hide all page
+ctrl - alt - t		-> open terminal
+

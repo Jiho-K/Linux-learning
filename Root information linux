@@ -1,0 +1,27 @@
+Root information
+
+bin - Essential command binaries
+boot - static files (should not be changed typically) that loads up when the computer/device boots
+dev - Device specific files
+etc - host specific system configuration
+		Stores all information on the changes the user made such as keyboard changes
+home - user home directory
+		you can access your files through /home/(user_name)
+		if you have sudo access you may be able to access another user's files??
+			(to test in the future)
+		However, creating a file inside home does NOT create a new user
+
+The root partition MUST contain /bin, /sbin, /lib, /etc, /dev in order to boot.
+
+/user contains all user programs (/user/bin), libraries (/user/lib), documentation (/user/share/doc), etc.
+	This is heavily recommended to be included for boot to work properly.
+
+/var contains variable information such as emails, websites, database, system cache, etc.
+	
+
+/tmp contains temporary files (temporarily store images, files, etc. and deleted soon after)
+	generally cleaned out at boot time or shutdown
+	stored on the RAM
+	large files goes into /var/tmp because RAM is small (typically)
+
+
