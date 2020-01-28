@@ -65,6 +65,18 @@ mv - move a file & rename files
 
 grep – The global regular expression print program lets you search through a file or output of another program.
 
+dkpg --list
+	lists all the packages installed on the device.
+
+to delete a file:
+	sudo apt-get remove (name of the program)
+		Removes the file but leaves config file
+	sudo apt-get --purge remove (name of the program)
+		Removes everything including the config file
+	To remove unused packages (exg. packages that were used by programs which were deleted)
+		sudo apt-get autoremove
+		or sudo apt-get --purge autoremove (program name)
+
 
 
 
